@@ -1,14 +1,19 @@
 # json 🐑
 
-> **MoonBit / `gekko` Fork:** This is a modified fork of [`gleam-lang/json`](https://github.com/gleam-lang/json) for [`gekko`](https://github.com/spiral-nights/gekko) (see [`NOTICE`](./NOTICE) and [`LICENCE`](./LICENCE)). It preserves full Erlang and JavaScript compatibility while adding `/// @external(moonbit, ...)` pragmas and native MoonBit FFI bindings under `moonbit/gleam_json_ffi/`.
+> [!WARNING]
+> **Deprecated:** This forked `gleam_json` repository is deprecated in favor of unmodified upstream Hex [`gleam_json`](https://hex.pm/packages/gleam_json) paired with the companion shim [`gekko_json`](https://github.com/spiral-nights/gekko_json) (and `gleam_stdlib` + [`gekko_stdlib`](https://github.com/spiral-nights/gekko_stdlib)).
 >
-> Use it in a `gekko` target project's `gleam.toml`:
+> **Migrate your `gleam.toml`:**
 >
 > ```toml
 > [dependencies]
-> gleam_stdlib = { git = "https://github.com/spiral-nights/gleam_stdlib.git", ref = "main" }
-> gleam_json = { git = "https://github.com/spiral-nights/gleam_json.git", ref = "main" }
+> gleam_stdlib = ">= 1.0.0 and < 2.0.0"
+> gleam_json = ">= 3.0.0 and < 4.0.0"
+> gekko_stdlib = { git = "https://github.com/spiral-nights/gekko_stdlib.git", ref = "main" }
+> gekko_json = { git = "https://github.com/spiral-nights/gekko_json.git", ref = "main" }
 > ```
+>
+> This repository remains available read-only so existing pinned commits continue to resolve, and will no longer receive updates.
 
 Work with JSON in Gleam!
 
